@@ -1,8 +1,7 @@
 var axios = require('axios');
-
 var keys = {
-  key:'AIzaSyCiHIhj8oL1gb8g2ABlR8Ynh6q0fGlnNjE',
-  cx: '003708712258437730856:vwoluufrl7c'
+  key:process.env.KEY,
+  cx: process.env.CX
 };
 
 var imageReducer = function(data) {

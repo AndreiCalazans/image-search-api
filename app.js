@@ -4,10 +4,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 const api = require('./api');
 const favicon = require('serve-favicon');
-
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
-
-mongoose.connect('mongodb://andrei:123456@ds041526.mlab.com:41526/image-search-terms')
+require('dotenv').config()
+mongoose.connect('mongodb://'+process.env.DB_USER+':'+process.env.DB_PASSWORD+'@ds041526.mlab.com:41526/image-search-terms')
 
 const termSchema = new mongoose.Schema({
   term: String,
