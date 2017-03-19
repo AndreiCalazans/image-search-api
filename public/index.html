@@ -17,7 +17,8 @@
       .title{
         background-color: lightgrey;
       }
-      code {
+
+      code , span {
         color: red;
         background-color: pink;
       }
@@ -36,25 +37,21 @@
       <ol>
         <h3>User stories</h3>
         <li> I can get the image URLs, alt text and page urls for a set of images relating to a given search string</li>
-        <li>  I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
-        <li>  I can get a list of the most recently submitted search strings.</li>
+        <li> I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+        <li> I can get a list of the most recently submitted search strings.</li>
       </ol>
     </blockquote>
     <h3 class='title'>Example of Usage</h3>
-    <p>passing this url: </p>
-    <code>https://andrei-little-url.herokuapp.com/https://www.google.com</code><br>
-    <p>you will get this: </p>
-    <code>https://andrei-little-url.herokuapp.com/1</code>
-    <h3 class='title'>Example output</h3>
-    <code>{
-{'url': 'https://www.google.com',
-'urlShortned': 'https://andrei-little-url.herokuapp.com/1' }
-}</code>
-      <h3 class='title'>Usage</h3>
-      <p>by using this:</p>
-      <code>https://andrei-little-url.herokuapp.com/1</code>
-      <p>Will redirect to: </p>
-      <code>https://www.google.com</code>
+    <h4  class='title'>Searching the image:</h4>
+    <p>You can search something and get a list of items from the search with the <span>Image URL, page URL and alt text</span>: </p>
+    <code>https://andrei-image-search.herokuapp.com/search/dogs</code><br>
+
+      <h4 class="title">Skipping pages</h4>
+      <p>You can skip pages by passing ?offset={number of pages}, ex:</p>
+      <code>https://andrei-image-search.herokuapp.com/search/dogs?offset=2</code>
+      <h4 class="title">Search history</h4>
+      <p>You can also get the history of the searches ordered by the most recent: </p>
+      <code>https://www.andrei.image.search.herokuapp.com/history</code>
 
 <footer>
   <p>Made by <a href="https://andreicalazans.github.io/">Andrei Calazans</a> </p>
